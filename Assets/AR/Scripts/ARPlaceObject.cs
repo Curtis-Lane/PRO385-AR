@@ -7,6 +7,7 @@ using UnityEngine.XR.ARSubsystems;
 
 public class ARPlaceObject : MonoBehaviour {
 	[SerializeField] private ARRaycastManager raycastManager;
+	[SerializeField] private GameObject[] prefabs;
 	bool isPlacing = false;
 
 	void Start() {
@@ -61,7 +62,8 @@ public class ARPlaceObject : MonoBehaviour {
 			Quaternion hitPoseRotation = rayHits[0].pose.rotation;
 
 			// Instantiate the prefab at the hit location
-			Instantiate(raycastManager.raycastPrefab, hitPosePosition, hitPoseRotation);
+			Quaternion rotation = hitPoseRotation * Quaternion.AngleAxis(Random.Range(0, 360), Vector3.up);
+			Instantiate(prefabs.Length > 0 ? prefabs[Random.Range(0, prefabs.Length)] : raycastManager.raycastPrefab, hitPosePosition, rotation);
 		}
 
 		// Wait briefly before allowing another placement

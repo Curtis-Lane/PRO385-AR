@@ -743,6 +743,8 @@ GameObject:
   - component: {fileID: 2512387470422636642}
   - component: {fileID: 2512387470422636671}
   - component: {fileID: 2512387470422636670}
+  - component: {fileID: 2512387470422636672}
+  - component: {fileID: 2512387470422636673}
   m_Layer: 0
   m_Name: XR Origin (AR Rig)
   m_TagString: Untagged
@@ -785,6 +787,35 @@ MonoBehaviour:
       m_Calls: []
   m_RaycastPrefab: {fileID: 7243829404427568687, guid: 0c07e0ace33ef4e42b3bfea3d9c4279b,
     type: 3}
+--- !u!114 &2512387470422636672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2512387470422636669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47d54ba8ebdc22641bff4bd39ad2e0e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ARPlaceObject
+  raycastManager: {fileID: 2512387470422636671}
+  prefabs: []
+--- !u!114 &2512387470422636673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2512387470422636669}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9baa17f65e660d840867d38e66fad27a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ARFireObject
+  xrOrigin: {fileID: 2512387470422636641}
+  prefabs:
+  - {fileID: 6998090292655747795, guid: 811378b46418dca45b3d0c354eaef7fd, type: 3}
 --- !u!4 &2512387470860572925
 Transform:
   m_ObjectHideFlags: 0
