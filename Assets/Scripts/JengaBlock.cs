@@ -26,7 +26,7 @@ public class JengaBlock : MonoBehaviour
             }
             else
             {
-                mesh.material.color = hoveredColor;
+                mesh.material.color = unhoveredColor;
             }
             currentlyHovered = false;
             rb.AddForce(Vector3.down * Time.deltaTime);
