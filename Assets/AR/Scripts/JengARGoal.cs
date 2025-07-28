@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
+using UnityEngine.XR.ARFoundation;
 
 /// <summary>
 /// The GoalManager cycles through a list of Goals, each representing
@@ -54,14 +55,7 @@ public class JengARGoal : MonoBehaviour
     [SerializeField]
     ObjectSpawner m_ObjectSpawner;
 
-    /// <summary>
-    /// Object Spawner used to detect whether the spawning goal has been achieved.
-    /// </summary>
-    public ObjectSpawner objectSpawner
-    {
-        get => m_ObjectSpawner;
-        set => m_ObjectSpawner = value;
-    }
+    public ARRaycastManager arRaycastManager;
 
     [Tooltip("The greeting prompt Game Object to show when onboarding begins.")]
     [SerializeField]
@@ -205,6 +199,5 @@ public class JengARGoal : MonoBehaviour
     public void SelectedTower()
     {
         greetingPrompt.SetActive(false);
-        objectSpawner.spawnOptionIndex = (int)(towerHeight.value - 5);
     }
 }
