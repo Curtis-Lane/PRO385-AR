@@ -196,8 +196,23 @@ public class JengARGoal : MonoBehaviour
     }
 
     public Slider towerHeight;
+    public GameObject ResetButton;
+    public GameObject LockInButton;
+    public ARPlaceObject arPlaceObject;
     public void SelectedTower()
     {
+        arPlaceObject.enabled = true;
         greetingPrompt.SetActive(false);
+        ResetButton.SetActive(true);
+    }
+
+    public void ResetTower()
+    {
+        arPlaceObject.enabled = false;
+        var towers = FindObjectsByType<CreateTower>(FindObjectsSortMode.None);
+        foreach (var tower in towers) Destroy(tower.gameObject);
+        greetingPrompt.SetActive(true);
+        ResetButton.SetActive(false);
+        
     }
 }
