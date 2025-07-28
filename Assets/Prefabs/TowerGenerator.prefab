@@ -47,7 +47,7 @@ MonoBehaviour:
   brickPrefab: {fileID: 1857658372858858965, guid: 43d77044386fd1240af938897c1289a9,
     type: 3}
   xDistance: 0.051
-  yDistance: 0.031
+  yDistance: 0.033
   width: 3
   height: 9
   scale: 2

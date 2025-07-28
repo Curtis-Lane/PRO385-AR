@@ -36,7 +36,7 @@ public class JengaBlock : MonoBehaviour
 
     public void Lock(Transform t)
     {
-        rb.isKinematic = true;
+        //rb.isKinematic = true;
         rb.useGravity = false;
         baseParent = transform.parent;
         transform.parent = t;
@@ -45,7 +45,7 @@ public class JengaBlock : MonoBehaviour
 
     public void Unlock()
     {
-        rb.isKinematic = false;
+        //rb.isKinematic = false;
         rb.useGravity = true;
         transform.parent = baseParent;
         mesh.material.color = hoveredColor;
