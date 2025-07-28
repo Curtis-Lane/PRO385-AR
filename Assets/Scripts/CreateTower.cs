@@ -16,11 +16,19 @@ public class CreateTower : MonoBehaviour {
 	[SerializeField]
 	private float scale = 1.0f;
 
+	private JengARGoal UI;
+
 	void Start() {
+		UI = FindFirstObjectByType<JengARGoal>();
+
 		GenerateTower();
 	}
 
 	private void GenerateTower() {
+		if(UI != null) {
+			this.height = (int) UI.towerHeight.value;
+		}
+
 		bool rotated = false;
 
 		float startingOffset = (xDistance * 0.5f) * (width - 1) * scale;

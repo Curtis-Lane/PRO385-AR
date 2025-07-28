@@ -199,6 +199,5 @@ public class JengARGoal : MonoBehaviour
     public void SelectedTower()
     {
         greetingPrompt.SetActive(false);
-        arRaycastManager.TowerHeight = (int)towerHeight.value;
     }
 }

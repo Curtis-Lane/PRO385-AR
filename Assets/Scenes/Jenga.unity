@@ -933,7 +933,6 @@ MonoBehaviour:
       m_Calls: []
   m_RaycastPrefab: {fileID: 3052709005894827763, guid: cad76d09b361add4d9d250ab3fe55c01,
     type: 3}
-  TowerHeight: 9
 --- !u!114 &2512387470422636671
 MonoBehaviour:
   m_ObjectHideFlags: 0
