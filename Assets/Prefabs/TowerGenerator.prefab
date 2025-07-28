@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CreateTower
   brickPrefab: {fileID: 1857658372858858965, guid: 43d77044386fd1240af938897c1289a9,
     type: 3}
-  xDistance: 0.095
-  yDistance: 0.051
+  xDistance: 0.05
+  yDistance: 0.03
   width: 3
   height: 9
   scale: 1

@@ -5,9 +5,9 @@ public class CreateTower : MonoBehaviour {
 	private GameObject brickPrefab;
 
 	[SerializeField]
-	private float xDistance = 0.095f;
+	private float xDistance = 0.05f;
 	[SerializeField]
-	private float yDistance = 0.055f;
+	private float yDistance = 0.03f;
 
 	[SerializeField]
 	private int width = 3;

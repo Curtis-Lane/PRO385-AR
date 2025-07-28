@@ -931,8 +931,7 @@ MonoBehaviour:
   <trackablesChanged>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
-  m_RaycastPrefab: {fileID: 3052709005894827763, guid: cad76d09b361add4d9d250ab3fe55c01,
-    type: 3}
+  m_RaycastPrefab: {fileID: 0}
 --- !u!114 &2512387470422636671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -964,7 +963,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ARPlaceObject
   raycastManager: {fileID: 2512387470422636670}
-  prefabs: []
+  prefabs:
+  - {fileID: 3052709005894827763, guid: cad76d09b361add4d9d250ab3fe55c01, type: 3}
 --- !u!4 &2512387470860572925
 Transform:
   m_ObjectHideFlags: 0
