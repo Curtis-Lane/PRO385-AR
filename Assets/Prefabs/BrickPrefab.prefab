@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 3726518371501258218}
   - component: {fileID: 8744038020008759895}
   - component: {fileID: 3455275647929451649}
+  - component: {fileID: 5488472934930349523}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -171,3 +172,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5488472934930349523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5111621648888425248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b285a670e0b47024d8468fee339f7dbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JengaBlock
+  mesh: {fileID: 3726518371501258218}
+  unhoveredColor: {r: 0.4039216, g: 0.42352945, b: 0.44705886, a: 0}
+  hoveredColor: {r: 0.4039216, g: 0.42352945, b: 0.8862745, a: 0}
+  selectedColor: {r: 0.4039216, g: 0.8352941, b: 0.44705886, a: 0}
