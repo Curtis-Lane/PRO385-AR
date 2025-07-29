@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.XR.ARFoundation;
 
 public class RayCastSender : MonoBehaviour
 {
+    [SerializeField] private ARRaycastManager raycastManager;
     JengaBlock currentBlock;
     private bool available = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,12 +17,15 @@ public class RayCastSender : MonoBehaviour
     {
         if (available)
         {
-            Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, 500);
+            Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, 500);
+            Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * 500, Color.red);
             if (hit.rigidbody)
             {
+                print("rigidbody hit");
                 currentBlock = hit.rigidbody.gameObject.GetComponent<JengaBlock>();
                 if (currentBlock != null)
                 {
+                    print("block hit");
                     currentBlock.MarkHovered();
                 }
             }
@@ -38,8 +43,11 @@ public class RayCastSender : MonoBehaviour
 
     public void Unlock()
     {
-        available = true;
-        currentBlock.Unlock();
+        if (currentBlock != null)
+        {
+            available = true;
+            currentBlock.Unlock();
+        }
     }
 
 

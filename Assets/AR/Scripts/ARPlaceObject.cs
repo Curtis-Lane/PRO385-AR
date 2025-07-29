@@ -21,9 +21,9 @@ public class ARPlaceObject : MonoBehaviour {
 			return;
 
 		// Handle touch input (on phones/tablets)
-		if(Touchscreen.current != null &&
+		if(((Touchscreen.current != null &&
 				   Touchscreen.current.touches.Count > 0 &&
-		 Touchscreen.current.touches[0].phase.ReadValue() == UnityEngine.InputSystem.TouchPhase.Began &&
+		 Touchscreen.current.touches[0].phase.ReadValue() == UnityEngine.InputSystem.TouchPhase.Began) || (Input.touchCount > 0 && Input.touches[0].phase == UnityEngine.TouchPhase.Began)) &&
 				   !isPlacing) {
 			isPlacing = true;
 
@@ -67,7 +67,7 @@ public class ARPlaceObject : MonoBehaviour {
 		}
 
 		// Wait briefly before allowing another placement
-		//StartCoroutine(SetPlacingToFalseWithDelay());
+		StartCoroutine(SetPlacingToFalseWithDelay());
 		//Prevent duplicate towers before reset
 		enabled = false;
 	}
