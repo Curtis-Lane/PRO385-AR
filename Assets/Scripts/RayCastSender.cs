@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.Android.Gradle;
 using UnityEngine;
 
@@ -41,5 +42,18 @@ public class RayCastSender : MonoBehaviour
     {
         available = true;
         currentBlock.Unlock();
+    }
+
+
+    public void Send()
+    {
+        if(available)
+        {
+            Lock();
+        }
+        else
+        {
+            Unlock();
+        }
     }
 }

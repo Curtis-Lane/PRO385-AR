@@ -204,15 +204,17 @@ public class JengARGoal : MonoBehaviour
         arPlaceObject.enabled = true;
         greetingPrompt.SetActive(false);
         ResetButton.SetActive(true);
+        LockInButton.SetActive(true);
     }
 
     public void ResetTower()
     {
         arPlaceObject.enabled = false;
+        FindFirstObjectByType<RayCastSender>().Unlock();
         var towers = FindObjectsByType<CreateTower>(FindObjectsSortMode.None);
         foreach (var tower in towers) Destroy(tower.gameObject);
         greetingPrompt.SetActive(true);
         ResetButton.SetActive(false);
-        
+        LockInButton.SetActive(false);
     }
 }

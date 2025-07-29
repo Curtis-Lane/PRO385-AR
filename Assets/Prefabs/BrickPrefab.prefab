@@ -185,6 +185,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JengaBlock
   mesh: {fileID: 3726518371501258218}
-  unhoveredColor: {r: 0.4039216, g: 0.42352945, b: 0.44705886, a: 0}
+  unhoveredColor: {r: 0.74509805, g: 0.627451, b: 0.5137255, a: 1}
   hoveredColor: {r: 0.4039216, g: 0.42352945, b: 0.8862745, a: 0}
   selectedColor: {r: 0.4039216, g: 0.8352941, b: 0.44705886, a: 0}
