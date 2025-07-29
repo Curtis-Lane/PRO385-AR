@@ -67,7 +67,7 @@ public class ARPlaceObject : MonoBehaviour {
 		}
 
 		// Wait briefly before allowing another placement
-		//StartCoroutine(SetPlacingToFalseWithDelay());
+		StartCoroutine(SetPlacingToFalseWithDelay());
 		//Prevent duplicate towers before reset
 		enabled = false;
 	}

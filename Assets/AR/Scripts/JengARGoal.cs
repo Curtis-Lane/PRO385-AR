@@ -210,7 +210,8 @@ public class JengARGoal : MonoBehaviour
     public void ResetTower()
     {
         arPlaceObject.enabled = false;
-        FindFirstObjectByType<RayCastSender>().Unlock();
+        FindFirstObjectByType<BackupBlockDetector>().Unlock();
+        FindFirstObjectByType<BackupBlockDetector>().ClearColliders();
         var towers = FindObjectsByType<CreateTower>(FindObjectsSortMode.None);
         foreach (var tower in towers) Destroy(tower.gameObject);
         greetingPrompt.SetActive(true);

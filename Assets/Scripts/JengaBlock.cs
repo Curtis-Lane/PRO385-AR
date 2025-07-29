@@ -13,6 +13,7 @@ public class JengaBlock : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        baseParent = transform.parent;
     }
 
     private void Update()
