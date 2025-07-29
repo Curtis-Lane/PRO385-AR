@@ -1,5 +1,3 @@
-using TMPro;
-using Unity.Android.Gradle;
 using UnityEngine;
 
 public class RayCastSender : MonoBehaviour
