@@ -38,8 +38,11 @@ public class RayCastSender : MonoBehaviour
 
     public void Unlock()
     {
-        available = true;
-        currentBlock.Unlock();
+        if (currentBlock != null)
+        {
+            available = true;
+            currentBlock.Unlock();
+        }
     }
 
 
