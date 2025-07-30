@@ -9,6 +9,7 @@ public class JengaBlock : MonoBehaviour
     [SerializeField] private Color hoveredColor;
     [SerializeField] private Color selectedColor;
     private bool currentlyHovered = false;
+    private bool locked = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,7 +17,7 @@ public class JengaBlock : MonoBehaviour
         baseParent = transform.parent;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (rb.useGravity)
         {
@@ -30,26 +31,34 @@ public class JengaBlock : MonoBehaviour
                 mesh.material.color = unhoveredColor;
             }
             currentlyHovered = false;
-            rb.AddForce(Vector3.down * Time.deltaTime);
+            //rb.AddForce(Vector3.down * Time.deltaTime);
         }
     }
 
 
     public void Lock(Transform t)
     {
-        rb.isKinematic = true;
-        rb.useGravity = false;
-        baseParent = transform.parent;
-        transform.parent = t;
-        mesh.material.color = selectedColor;
+        if (!locked)
+        {
+            rb.isKinematic = true;
+            rb.useGravity = false;
+            baseParent = transform.parent;
+            transform.parent = t;
+            mesh.material.color = selectedColor;
+            locked = true;
+        }
     }
 
     public void Unlock()
     {
-        rb.isKinematic = false;
-        rb.useGravity = true;
-        transform.parent = baseParent;
-        mesh.material.color = hoveredColor;
+        if (locked)
+        {
+            rb.isKinematic = false;
+            rb.useGravity = true;
+            transform.parent = baseParent;
+            mesh.material.color = hoveredColor;
+            locked = false;
+        }
     }
 
     public void MarkHovered()

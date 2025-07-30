@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 3726518371501258218}
   - component: {fileID: 8744038020008759895}
   - component: {fileID: 3455275647929451649}
-  - component: {fileID: 5488472934930349523}
+  - component: {fileID: 8467360118179052993}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -96,8 +96,6 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -119,7 +117,6 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -152,10 +149,10 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5111621648888425248}
-  serializedVersion: 5
+  serializedVersion: 4
   m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Drag: 0
+  m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -172,7 +169,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
---- !u!114 &5488472934930349523
+--- !u!114 &8467360118179052993
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,10 +178,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5111621648888425248}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b285a670e0b47024d8468fee339f7dbe, type: 3}
+  m_Script: {fileID: 11500000, guid: 779801f1c452fe244afeb8aafb18c1c0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::JengaBlock
+  m_EditorClassIdentifier: 
   mesh: {fileID: 3726518371501258218}
-  unhoveredColor: {r: 0.74509805, g: 0.627451, b: 0.5137255, a: 1}
-  hoveredColor: {r: 0.4039216, g: 0.42352945, b: 0.8862745, a: 0}
-  selectedColor: {r: 0.4039216, g: 0.8352941, b: 0.44705886, a: 0}
+  unhoveredColor: {r: 0.74509805, g: 0.627451, b: 0.5137255, a: 0}
+  hoveredColor: {r: 0.40392157, g: 0.42352942, b: 0.8862745, a: 0}
+  selectedColor: {r: 0.40392157, g: 0.8352941, b: 0.44705883, a: 0}

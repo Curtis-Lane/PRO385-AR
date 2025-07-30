@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7369953588508822659}
-  - component: {fileID: 8612647041372120191}
+  - component: {fileID: -1390611150879265988}
   m_Layer: 0
   m_Name: TowerGenerator
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8612647041372120191
+--- !u!114 &-1390611150879265988
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,13 +41,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3052709005894827763}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a544367c5394b264a91c2230cb82c386, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a0013294d3f85b4db272261e5f5794e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CreateTower
-  brickPrefab: {fileID: 1857658372858858965, guid: 43d77044386fd1240af938897c1289a9,
+  m_EditorClassIdentifier: 
+  brickPrefab: {fileID: 1857658372858858965, guid: 3da56efce45a08f49b14549eb7fb53cb,
     type: 3}
-  xDistance: 0.051
-  yDistance: 0.033
+  xDistance: 0.05
+  yDistance: 0.03
   width: 3
-  height: 9
-  scale: 2
+  height: 15
+  scale: 1
